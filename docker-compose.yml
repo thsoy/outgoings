@@ -1,0 +1,13 @@
+version: '2.15.1'
+services: 
+  db:
+    image: postgres:latest
+    container_name: thsoy
+    restart: always
+    ports:
+      - "5454:5432"
+    environment:
+      POSTGRES_USER: "thsoy"
+      POSTGRES_PASSWORD: "thsoy"
+    volumes:
+      - /var/lib/postgresql/data
